@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>论坛首页</title>
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12">
-                <div class="jumbotron">
-                    <h1 align="center">python 部落论坛</h1>
-                </div>
+
+    <div class="col-xs-12 col-md-12">
+
+
+    </div>
+
+    <div class="col-xs-12 col-md-10">
+        {% for b in blocks %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <a href="/article/list/{{ b.id }}" style="font-size: 16px">{{ b.name }}</a>
+                <span  class="pull-right">管理员:{{ b.manager_name }}</span>
+            </div>
+            <div class="panel-body">
+                {{ b.desc }}
             </div>
         </div>
-
-
-        <div class="row">
-            <div class="col-xs-12 col-md-10">
-                 {% for b in blocks %}
+        {% endfor %}
+    </div>
+            <div class="col-xs-12 col-md-2">
                 <div class="panel panel-default">
-                  <div class="panel-heading">
-                      <a href="#" style="font-size: 16px">{{ b.name }}</a>
-                      <span  class="pull-right">{{ b.manager }}</span>
-                  </div>
-                  <div class="panel-body">
-                    {{ b.desc }}
-                  </div>
-                </div>
-                {% endfor %}
-            </div>
+                    <div class="panel-heading">
+                {% if user.is_authenticated %}
+                    <p>{{ user.username }} 欢迎来到论坛</p>
+                        <a href="/accounts/password_change" style="font-size: 16px">修改密码</a>
+                        <a href="/accounts/logout" style="font-size: 16px">登出</a>
+                {% else %}
+                    <p>匿名用户请 <a href="/accounts/login/" style="font-size: 16px"> 登录</a> </p>
 
-             <div class="col-xs-12 col-md-2">
-                <div class="well">个人中心</div>
+                {% endif %}
+
+
+                </div>
             </div>
-       </div>
     </div>
 </body>
-</html>
+{% endblock %}

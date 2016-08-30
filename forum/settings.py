@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bbs',
+    'article',
+    'activate',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,11 +82,11 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS':{'charset':'utf8mb4'},
+        'OPTIONS':{'charset':'utf8'},
         'NAME': 'forum',
         'USER':'damon',
         'PASSWORD':'damondeng',
-        'HOST':'localhost',
+        'HOST':'172.16.109.211',
         'PORT':'3306',
     }
 }
@@ -115,7 +117,9 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 #LANGUAGE_CODE = 'zh-cn'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE="Asia/Shanghai"
+
 
 USE_I18N = True
 
@@ -132,3 +136,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =(
     os.path.join(BASE_DIR,"static"),
 )
+
+###email setting
+EMAIL_USE_SSL=True
+EMAIL_HOST="smtp.qq.com"
+EMAIL_PORT=465
+EMAIL_HOST_USER="304749970@qq.com"
+EMAIL_HOST_PASSWORD="授权码"
+DEFAULT_FROM_EMAIL="304749970@qq.com"
+
+
+LOGIN_REDIRECT_URL='/bbs'
