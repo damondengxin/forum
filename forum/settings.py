@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'bbs',
     'article',
     'activate',
+    'comment',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -142,7 +143,7 @@ EMAIL_USE_SSL=True
 EMAIL_HOST="smtp.qq.com"
 EMAIL_PORT=465
 EMAIL_HOST_USER="304749970@qq.com"
-EMAIL_HOST_PASSWORD="授权码"
+EMAIL_HOST_PASSWORD="vncosbhevxwnbjif"
 DEFAULT_FROM_EMAIL="304749970@qq.com"
 
 

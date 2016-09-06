@@ -3,22 +3,102 @@
     <div class="col-xs-12 col-md-12">
 
         <table class="table table-bordered" >
-        <thead>
-            <tr>
-                <th>作者</th>
-                <th>内容</th>
-            </tr>
-        </thead>
+
         <tbody>
             <tr>
-                <td> no name </td>
-                <td><h1>{{ a.title }}  </h1>
+                <td>
+                    作者:
+                    {{ article.owner }}
+                </td>
+                <td>
+                    <h1>{{ article.title }}  </h1>
                     <br />
-                    {{ a.content }}
+                    {{ article.content }}
                 </td>
             </tr>
+
+            {% for com in comment %}
+            <tr>
+                <td>
+                    作者:
+                    {{ com.owner }}
+                </td>
+                <td>
+                    {{ com.content }}
+                </td>
+            </tr>
+            {% endfor %}
+
         </tbody>
         </table>
+
+            <nav>
+             <ul class="pagination">
+                 {% if pagination_data.has_previous %}
+                    <li><a href="?page_no= 1" >首页</a></li>
+                    <li><a href="?page_no={{ pagination_data.previous_link }}" >&laquo</a></li>
+                 {% endif %}
+                 {% for no in pagination_data.page_links %}
+                    {% if no == pagination_data.current_no %}
+                        <li class="active">
+                            <a href="?page_no={{ pagination_data.current_no }}"> {{ pagination_data.current_no }} </a>
+                        </li>
+                    {% else %}
+                        <li ><a href="?page_no={{ no }}"> {{ no }} </a></li>
+                    {% endif %}
+                 {% endfor %}
+                 {% if pagination_data.has_next %}
+                    <li><a href="?page_no={{ pagination_data.next_link }}"  >&raquo</a></li>
+                    <li><a href="?page_no= {{ pagination_data.page_cnt }}" >尾页</a></li>
+                 {% endif %}
+
+              </ul>
+        </nav>
+
+            {% csrf_token %}
+
+
+            <a  class="col-sm-1 control-label">作者: {{ user.usernanme }}</a>
+            <div class="col-sm-11 ">
+                <textarea class="form-control" rows="3" name="comment"  id="commentContent" >
+                {{ comment.content |linebreaksbr  }}
+                </textarea>
+                <br />
+            <button type="submit" class="btn btn-primary" id="commentBtn" >发表评论</button>
+
+            </div>
+
+
+
+
+
+
+        <script type="text/javascript" src="/static/js/jquery.1.9.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.csrf.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    var article_id = {{ article.id }};
+                    var owner = '{{ user.username }}';
+                    var page_cnt = {{ pagination_data.page_cnt }};
+
+                    $("#commentBtn").click(function() {
+                        var comment=$("#commentContent").val();
+                        var  param = {"article_id":article_id,"content":comment,"owner": owner};
+
+                        $.post("/comment/create/", param, function (data) {
+                            var ret = JSON.parse(data);
+                            if (ret["status"] == "ok" ) {
+                                        $("#commentContent").val("");
+                                        window.location.href = "/article/detail/{{ article.id }}?page_no=" +1000
+
+                                    }
+                               else {
+                                        alert(ret["msg"]);
+                                 }
+                             });
+                         });
+             });
+        </script>
     </div>
 
 

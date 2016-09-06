@@ -13,7 +13,7 @@ class Article(models.Model):
     content= models.CharField('板块描述',max_length=10000)
     status = models.IntegerField('状态',choices=((0,'正常'),(-1,'删除')))
 
-    create_timestamp= models.DateTimeField('创建对象',auto_now_add=True)
+    create_timestamp= models.DateTimeField('创建时间',auto_now_add=True)
     last_update_timestamp=models.DateTimeField('最后更新时间',auto_now=True)
 
 

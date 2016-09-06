@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^bbs/',include('bbs.urls')),
     url(r'^article/',include('article.urls')),
     url(r'^activate/', include('activate.urls')),
+    url(r'^comment/',include('comment.urls')),
     url(r'^accounts/',include('django.contrib.auth.urls')) ,
     url(r'^password_reset/$',auth_views.password_reset,name='password_reset'),
     #url(^password_reset/$ [name='password_reset']),
