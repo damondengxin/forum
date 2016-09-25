@@ -28,6 +28,12 @@
              </div>
         </div>
         </form>
+
+        <script type="text/javascript" src="/static/ueditor/ueditor.config.js">
+        </script>
+        <script type="text/javascript" src="/static/ueditor/ueditor.all.js">
+        </script>
+
         {% for field in form %}
             {% if field.errors %}
                 {% for error in field.errors %}

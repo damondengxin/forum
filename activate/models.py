@@ -12,3 +12,6 @@ class ActivationCode(models.Model):
 
     # def __str__(self):
     #     return  self.username
+    class Meta:
+        verbose_name='激活码'
+        verbose_name_plural= '激活码'

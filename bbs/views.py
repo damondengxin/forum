@@ -3,9 +3,14 @@ from django.shortcuts import  render,redirect
 from bbs.models import  Block
 from django.contrib.auth.models import  User
 import  uuid
+import  os
 from django.core.mail import  send_mail
 from activate.models import  ActivationCode
 from django.utils.timezone import  datetime,timedelta
+from  message.models import  Message
+from usercenter.models import  UserProfile
+from django.contrib.auth.decorators import  login_required
+
 
 
 def index(request):
@@ -15,7 +20,13 @@ def index(request):
     #              ]
     #block_infos =Block.objects.all().order_by("-id")
     block_infos = Block.objects.filter(status=0).order_by("-id")
-    return  render(request,'bbs/index.html',{'blocks':block_infos})
+    user_count=User.objects.filter(username=request.user,)
+    #if len(user_count) != 0:
+    if user_count :
+        msg_cnt = Message.objects.filter(status=1, owner=request.user).count()
+        return render(request, 'bbs/index.html', {'blocks': block_infos, 'msg_cnt': msg_cnt})
+    else:
+        return  render(request,'bbs/index.html',{'blocks':block_infos})
 
 
 def register(request):
@@ -70,4 +81,6 @@ def register(request):
 #               from_email='304749970@qq.com',
 #               recipient_list=['damon@hudongpai.com'],
 #               fail_silently=False)
+
+
 

@@ -8,6 +8,7 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import  login_required
 from django.contrib.auth.admin import  User
 from comment.models import Comment
+from message.models import Message
 
 
 def paginate_queryset(objs,page_no,cnt_per_page=2,half_show_length=5):

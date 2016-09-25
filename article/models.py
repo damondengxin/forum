@@ -26,3 +26,5 @@ class Article(models.Model):
 
 
 
+
+

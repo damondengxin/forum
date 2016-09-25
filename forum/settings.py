@@ -38,9 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bbs',
-    'article',
-    'activate',
+    #'article',
+    'article.apps.ArticleConfig',
+    #'activate',
+    'activate.apps.ActivateConfig',
     'comment',
+    'message',
+    'usercenter',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -136,6 +140,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS =(
     os.path.join(BASE_DIR,"static"),
+    os.path.join(BASE_DIR, "DjangoUeditor/static"),
+
 )
 
 ###email setting

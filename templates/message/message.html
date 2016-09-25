@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="col-xs-12 col-md-12">
+        <ul>
+            {% if unread %}
+                {% for msg in unread %}
+                    <li class="list-group-item">
+                        <a href="/article/detail/{{ msg.link_id }}" id="pinglun">有人回复你的评论 {{ msg.content }}</a>
+                    </li>
+
+
+
+        <script type="text/javascript" src="/static/js/jquery.1.9.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.csrf.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                    var contentid = {{ msg.content_id }};
+                    var owner = '{{ user.username }}';
+                    //var linkid = '{{ msg.link }}';
+
+
+
+                    $("#pinglun").click(function() {
+                        //var  param = {"contentid":contentid,"owner": owner,"linkid":linkid};
+                        var  param = {"contentid":contentid,"owner": owner};
+
+                        $.post("/message/read/", param, function (data) {
+                            var ret = JSON.parse(data);
+                            if (ret["status"] == "ok" ) {
+                                        //window.location.href = "/article/detail/{{ article.id }}?page_no=" +1000
+                                        window.location.href = "/article/detail/{{ msg.link_id }}?"
+                                            }
+                             else {
+                                        alert(ret["msg"]);
+                                    }
+                              });
+                            });
+                        });
+        </script>
+            {% endfor %}
+            {% else %}
+               没有未读消息 , <a href="/bbs">  返回首页</a>
+            {% endif %}
+        </ul>
+
+
+    </div>
+
+
+
+{% endblock %}

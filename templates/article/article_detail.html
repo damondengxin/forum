@@ -24,7 +24,16 @@
                     {{ com.owner }}
                 </td>
                 <td>
-                    {{ com.content }}
+                    {% if com.to_comment %}
+                        <blockquote>
+                            <b> {{ com.to_comment.owner.username }}:</b>
+                            <br />
+                            {{ com.to_comment.content |linebreaksbr }}
+                        </blockquote>
+                    {% endif %}
+
+                    {{ com.content|linebreaksbr }}
+                    <a href="#replyRegin" data-id = "{{ com.id }}" class="replyBtn btn btn-primary pull-right">回复</a>
                 </td>
             </tr>
             {% endfor %}
@@ -58,8 +67,9 @@
             {% csrf_token %}
 
 
-            <a  class="col-sm-1 control-label">作者: {{ user.usernanme }}</a>
-            <div class="col-sm-11 ">
+        <label  class="col-sm-2 control-label">作者: {{ user.username }}</label>
+
+            <div class="col-sm-10 ">
                 <textarea class="form-control" rows="3" name="comment"  id="commentContent" >
                 {{ comment.content |linebreaksbr  }}
                 </textarea>
@@ -81,23 +91,30 @@
                     var owner = '{{ user.username }}';
                     var page_cnt = {{ pagination_data.page_cnt }};
 
+                    var to_comment_id =0;
+                     $(".replyBtn").click(function(e) {
+                     to_comment_id = parseInt($(e.target).attr("data-id"));
+                     $("#commentContent").focus();
+                        return false;
+
+                        });
+
                     $("#commentBtn").click(function() {
                         var comment=$("#commentContent").val();
-                        var  param = {"article_id":article_id,"content":comment,"owner": owner};
-
+                        var  param = {"article_id":article_id,"content":comment,"owner": owner,"to_comment_id":to_comment_id};
                         $.post("/comment/create/", param, function (data) {
                             var ret = JSON.parse(data);
                             if (ret["status"] == "ok" ) {
                                         $("#commentContent").val("");
-                                        window.location.href = "/article/detail/{{ article.id }}?page_no=" +1000
-
-                                    }
-                               else {
+                                        //window.location.href = "/article/detail/{{ article.id }}?page_no=" +1000
+                                        window.location.href = "/article/detail/{{ article.id }}?"
+                                            }
+                             else {
                                         alert(ret["msg"]);
-                                 }
-                             });
-                         });
-             });
+                                    }
+                              });
+                            });
+                        });
         </script>
     </div>
 
