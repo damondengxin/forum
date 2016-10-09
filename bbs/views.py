@@ -11,6 +11,9 @@ from  message.models import  Message
 from usercenter.models import  UserProfile
 from django.contrib.auth.decorators import  login_required
 
+import  logging
+
+LOGGER = logging.getLogger('forum')
 
 
 def index(request):
@@ -19,6 +22,12 @@ def index(request):
     #              {'name':'部落建设','desc':'有关部落建设的事宜','manager':'admin'}
     #              ]
     #block_infos =Block.objects.all().order_by("-id")
+    LOGGER.info("start application")
+    LOGGER.error("fail to start application")
+    try:
+        name = request.GET['name']
+    except Exception as e:
+        LOGGER.exception(e)
     block_infos = Block.objects.filter(status=0).order_by("-id")
     user_count=User.objects.filter(username=request.user,)
     #if len(user_count) != 0:

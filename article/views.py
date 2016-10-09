@@ -153,7 +153,7 @@ class ArticleCreateView(View):
             article = form.save(commit=False)
             article.block = self.block
             #获取当前用户的request.user
-            #article.owner = request.user
+            article.owner = request.user
             article.status = 0
             article.save()
             return redirect("/article/list/%s" % self.block_id)

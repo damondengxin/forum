@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^password_change/done/$', auth_views.password_change_done, name='password_change_done'),
     url(r'^message/',include('message.urls')),
     url(r'^usercenter/',include('usercenter.urls')),
+    url(r'^ueditor/',include('DjangoUeditor.urls')),
 ]
 
 admin.site.disable_action('delete_selected')

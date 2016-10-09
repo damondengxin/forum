@@ -25,7 +25,7 @@ SECRET_KEY = '&a-oz1o0_-xx@p1rdlwl#c*e^8z6#27+jns$7e&r17+zg0l+96'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1","192.168.0.3"]
 
 
 # Application definition
@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'usercenter',
 ]
 
+#from . import middlewares
+
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -56,6 +58,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'middlewares.PrintParamsMiddleware',
 ]
 
 ROOT_URLCONF = 'forum.urls'
@@ -143,13 +146,61 @@ STATICFILES_DIRS =(
     os.path.join(BASE_DIR, "DjangoUeditor/static"),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR,'dist_static')
+
+MEDIA_ROOT="/data/project/forum/userres/article/"
+MEDIA_URL="http://res.myforum.com/article/"
+
+LOGIN_REDIRECT_URL='/bbs'
+
 ###email setting
 EMAIL_USE_SSL=True
 EMAIL_HOST="smtp.qq.com"
 EMAIL_PORT=465
 EMAIL_HOST_USER="304749970@qq.com"
-EMAIL_HOST_PASSWORD="vncosbhevxwnbjif"
+##邮箱授权码
+EMAIL_HOST_PASSWORD=""
 DEFAULT_FROM_EMAIL="304749970@qq.com"
 
+##config.ini
+import configparser
 
-LOGIN_REDIRECT_URL='/bbs'
+config= configparser.ConfigParser()
+#config_path = os.path.join(os.path.dirname(BASE_DIR),'conf/config.ini')
+config_path = os.path.join(BASE_DIR,'conf/config.ini')
+config.read(config_path)
+DEBUG=config['default'].getboolean("debug")
+#MEDIA_BASE_URL = config['default']["media_base_url"]
+MEDIA_URL=config['default']["media_base_url"]
+
+
+LOGGING= {
+    "version" : 1,
+    "disables_existing_loggers": False,
+    "formatters": {
+        "verbose" : {
+            "format" : '%(levelname)s %(asctime)s %(module)s %(process)d %(message)s'
+        },
+    },
+    'handlers': {
+        'info_record' : {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR,'log/info.log'),
+            'formatter':'verbose',
+        },
+    'error_record': {
+        'level':'ERROR',
+        'class':'logging.FileHandler',
+        'filename':os.path.join(BASE_DIR,'log/error.log'),
+        'formatter':'verbose',
+    },
+    },
+    'loggers': {
+        'forum': {
+            'handlers': ['info_record','error_record'],
+            'level':'DEBUG',
+        },
+    },
+}
+

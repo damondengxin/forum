@@ -1,0 +1,6 @@
+uwsgi: unrecognized option `--init'
+getopt_long() error
+uwsgi: unrecognized option `--init'
+getopt_long() error
+[uWSGI] getting INI configuration from conf/uwsgi.ini
+[uWSGI] getting INI configuration from /data/project/forum/conf/uwsgi.ini

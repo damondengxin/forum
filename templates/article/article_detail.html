@@ -13,7 +13,10 @@
                 <td>
                     <h1>{{ article.title }}  </h1>
                     <br />
+                    {% autoescape off %}
                     {{ article.content }}
+                    {% endautoescape %}
+
                 </td>
             </tr>
 

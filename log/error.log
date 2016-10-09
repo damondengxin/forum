@@ -1,0 +1,16 @@
+ERROR 2016-10-09 07:50:41,243 views 77023 fail to start application
+ERROR 2016-10-09 08:02:57,760 views 77229 fail to start application
+ERROR 2016-10-09 08:02:57,760 views 77229 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
