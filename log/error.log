@@ -14,3 +14,498 @@ Traceback (most recent call last):
   File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
     raise MultiValueDictKeyError(repr(key))
 django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-09 16:43:58,680 views 80927 fail to start application
+ERROR 2016-10-09 16:43:58,680 views 80927 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-09 16:50:44,029 views 81016 fail to start application
+ERROR 2016-10-09 16:50:44,030 views 81016 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-09 16:52:06,649 views 81019 fail to start application
+ERROR 2016-10-09 16:52:06,649 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-09 16:52:14,767 views 81019 fail to start application
+ERROR 2016-10-09 16:52:14,767 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-09 17:18:38,686 views 81019 fail to start application
+ERROR 2016-10-09 17:18:38,686 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-10 16:54:09,196 views 81019 fail to start application
+ERROR 2016-10-10 16:54:09,201 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-10 17:32:52,866 views 81019 fail to start application
+ERROR 2016-10-10 17:32:52,866 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-10 17:46:56,575 views 81019 fail to start application
+ERROR 2016-10-10 17:46:56,576 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-10 18:48:50,206 views 81019 fail to start application
+ERROR 2016-10-10 18:48:50,207 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-10 19:00:46,030 views 81019 fail to start application
+ERROR 2016-10-10 19:00:46,030 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 07:49:44,684 views 81019 fail to start application
+ERROR 2016-10-11 07:49:44,688 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 07:51:17,683 views 81019 fail to start application
+ERROR 2016-10-11 07:51:17,683 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 07:53:05,058 views 81019 fail to start application
+ERROR 2016-10-11 07:53:05,058 views 81019 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 10:11:11,516 views 90839 fail to start application
+ERROR 2016-10-11 10:11:11,518 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 10:13:00,504 views 90839 fail to start application
+ERROR 2016-10-11 10:13:00,504 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:00:00,031 views 90839 fail to start application
+ERROR 2016-10-11 11:00:00,031 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:03:12,816 views 90839 fail to start application
+ERROR 2016-10-11 11:03:12,816 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:05:10,256 views 90839 fail to start application
+ERROR 2016-10-11 11:05:10,256 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:12:47,110 views 90839 fail to start application
+ERROR 2016-10-11 11:12:47,111 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:16:59,143 views 90839 fail to start application
+ERROR 2016-10-11 11:16:59,144 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 11:18:46,408 views 90839 fail to start application
+ERROR 2016-10-11 11:18:46,411 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-11 19:10:09,980 views 90839 fail to start application
+ERROR 2016-10-11 19:10:09,984 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 09:45:48,830 views 90839 fail to start application
+ERROR 2016-10-12 09:45:48,835 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 09:53:31,050 views 90839 fail to start application
+ERROR 2016-10-12 09:53:31,051 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:10:49,464 views 90839 fail to start application
+ERROR 2016-10-12 10:10:49,465 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:14:36,800 views 90839 fail to start application
+ERROR 2016-10-12 10:14:36,800 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:16:16,549 views 90839 fail to start application
+ERROR 2016-10-12 10:16:16,553 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:17:43,062 views 90839 fail to start application
+ERROR 2016-10-12 10:17:43,063 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:19:39,729 views 90839 fail to start application
+ERROR 2016-10-12 10:19:39,730 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:20:30,161 views 90839 fail to start application
+ERROR 2016-10-12 10:20:30,165 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 10:23:11,678 views 90839 fail to start application
+ERROR 2016-10-12 10:23:11,679 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 21:29:20,933 views 90839 fail to start application
+ERROR 2016-10-12 21:29:20,937 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
+ERROR 2016-10-12 21:55:50,549 views 90839 fail to start application
+ERROR 2016-10-12 21:55:50,550 views 90839 "'name'"
+Traceback (most recent call last):
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/project/forum/bbs/views.py", line 28, in index
+    name = request.GET['name']
+  File "/usr/local/var/pyenv/versions/forum/lib/python3.5/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'name'"
